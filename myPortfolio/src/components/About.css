@@ -1,0 +1,159 @@
+.about {
+  position: relative;
+  padding: 140px 8%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Background container */
+
+.about-background-shapes{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+}
+
+/* Blob */
+
+.about-blob{
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  filter: blur(50px);
+  opacity:0.35;
+  animation: floatBlob 12s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+/* Colors */
+
+.blob-1{
+  background: radial-gradient(circle, #7c3aed, transparent 70%);
+  top:10%;
+left:5%;
+}
+
+.blob-2{
+  background: radial-gradient(circle, #38bdf8, transparent 70%);
+  bottom:10%;
+right:5%;
+}
+
+.blob-3{
+  background: radial-gradient(circle, #22c55e, transparent 70%);
+  top:40%;
+  left:45%;
+  opacity:0.2;
+}
+
+/* Animation */
+
+@keyframes floatBlob{
+  0%{ transform: translateY(0px); }
+  50%{ transform: translateY(40px); }
+  100%{ transform: translateY(0px); }
+}
+
+
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.about-left {
+  flex: 1;
+  max-width: 650px;
+}
+
+.about-left p {
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #cbd5f5;
+}
+
+.about-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+}
+
+@media (max-width: 900px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-right {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-wrapper,
+.section-title{
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ============================= */
+/* LIGHT MODE FIXES */
+/* ============================= */
+
+body.light .about-left p{
+  color:#475569;
+}
+
+/* Cards */
+
+body.light .about-card{
+
+  background:#ffffff;
+
+  border:1px solid rgba(0,0,0,0.06);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+body.light .about-card:hover{
+  border-color:var(--accent-secondary);
+  transform:translateY(-6px);
+}
+
+/* Blob blending fix */
+
+body.light .about-blob{
+  mix-blend-mode: normal;
+  opacity:0.25;
+}
+
+/* Title color */
+
+body.light .section-title{
+  color:#0f172a;
+}

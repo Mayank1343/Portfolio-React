@@ -1,0 +1,27 @@
+.skills-section {
+  padding: 100px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+.skill-group {
+  margin-bottom: 50px;
+}
+
+.category-title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.skills-container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

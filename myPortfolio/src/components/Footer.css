@@ -1,0 +1,198 @@
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer{
+
+  background: transparent;
+
+  border-top:1px solid var(--border-color);
+
+  padding-top:80px;
+
+  background:
+  linear-gradient(var(--bg-secondary),var(--bg-secondary)),
+
+  linear-gradient(var(--grid-color) 1px, transparent 1px),
+  linear-gradient(90deg,var(--grid-color) 1px, transparent 1px);
+
+  background-size:100%,40px 40px;
+
+
+}
+
+/* Top accent line */
+
+.footer::before{
+
+  content:"";
+
+  display:block;
+
+  height:1px;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-secondary),
+    transparent
+  );
+
+  margin-bottom:40px;
+
+}
+
+/* ============================= */
+/* FOOTER GRID */
+/* ============================= */
+
+.footer-container{
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:60px;
+
+  padding:0 8%;
+
+}
+
+/* ============================= */
+/* TEXT */
+/* ============================= */
+
+.footer h2{
+
+  font-size:22px;
+
+  margin-bottom:10px;
+
+}
+
+.footer h3{
+
+  font-size:18px;
+
+  margin-bottom:15px;
+
+}
+
+.footer p,
+.footer span{
+
+  color:var(--text-secondary);
+
+  font-size:14px;
+
+}
+
+/* ============================= */
+/* LINKS */
+/* ============================= */
+
+.footer-links a{
+
+  display:block;
+
+  color:var(--text-secondary);
+
+  text-decoration:none;
+
+  margin-bottom:10px;
+
+  transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+  color:var(--accent-secondary);
+
+}
+
+/* ============================= */
+/* SOCIAL ICONS */
+/* ============================= */
+
+.social-icons{
+
+  display:flex;
+
+  gap:15px;
+
+}
+
+.social-icons img{
+
+  width:28px;
+
+  opacity:.8;
+
+  transition:.3s;
+
+}
+
+.social-icons img:hover{
+
+  opacity:1;
+
+  transform:scale(1.15);
+
+}
+
+/* ============================= */
+/* FOOTER BOTTOM */
+/* ============================= */
+
+.footer-bottom{
+
+  text-align:center;
+
+  margin-top:60px;
+
+  padding:20px;
+
+  border-top:1px solid var(--border-color);
+
+  font-size:14px;
+
+  color:var(--text-secondary);
+
+}
+
+
+/* ============================= */
+/* LIGHT MODE FIX */
+/* ============================= */
+
+body.light .footer{
+
+  background:#ffffff;
+
+}
+
+body.light .footer::before{
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+
+}
+
+body.light .social-icons img{
+
+  filter: brightness(0);
+
+  opacity:0.7;
+
+}
+
+body.light .social-icons img:hover{
+
+  opacity:1;
+
+}

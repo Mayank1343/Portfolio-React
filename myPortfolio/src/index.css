@@ -1,0 +1,402 @@
+/* =========================
+   FONT IMPORTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://db.onlinewebfonts.com/c/6d2a9bcf540150d9e12e88c4b0c5c305?family=Media+Sans+Extended");
+
+
+/* =========================
+   ROOT VARIABLES (BRAND)
+========================= */
+
+:root{
+
+  /* fonts */
+
+  --font-display:"Media Sans Extended",sans-serif;
+  --font-primary:"Space Grotesk",sans-serif;
+  --font-ui:"Inter",sans-serif;
+
+  /* brand colors */
+
+  --accent:#FF6A3D;
+  --accent-hover:#FF8A5C;
+
+  --accent-secondary:#38BDF8;
+  --accent-tertiary:#7C3AED;
+
+}
+
+
+/* =========================
+   DARK THEME
+========================= */
+
+body.dark{
+
+  --bg-primary:#0B1220;
+  --bg-secondary:#0F172A;
+
+  --card-bg:#111827;
+
+  --text-primary:#FFFFFF;
+  --text-secondary:#94A3B8;
+  --text-muted:#64748B;
+
+  --border-color:rgba(255,255,255,0.08);
+  --grid-color:rgba(255,255,255,0.05);
+
+  --navbar-bg:rgba(11,18,32,0.65);
+
+}
+
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+body.light{
+
+  --bg-primary:#F6F8FB;
+  --bg-secondary:#FFFFFF;
+
+  --card-bg:#FFFFFF;
+
+  --text-primary:#0F172A;
+  --text-secondary:#475569;
+  --text-muted:#64748B;
+
+  --border-color:rgba(0,0,0,0.08);
+  --grid-color: rgba(15,23,42,0.08);
+
+  --navbar-bg:rgba(255,255,255,0.75);
+
+}
+
+
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body{
+
+  font-family:var(--font-primary);
+
+  background:var(--bg-primary);
+  color:var(--text-primary);
+
+  overflow-x:hidden;
+
+  transition:
+  background .35s ease,
+  color .25s ease;
+
+}
+
+
+/* =========================
+   FLOATING GRID BACKGROUND
+========================= */
+
+body::before{
+
+  content:"";
+  position:fixed;
+  inset:0;
+
+  background-image:
+  linear-gradient(var(--grid-color) 1px,transparent 1px),
+  linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
+
+  background-size:60px 60px;
+
+  opacity:0.35;
+
+  animation:gridMove 80s linear infinite;
+
+  z-index:-2;
+
+}
+
+@keyframes gridMove{
+
+  0%{
+    transform:translate(0,0);
+  }
+
+  100%{
+    transform:translate(60px,60px);
+  }
+
+}
+
+
+/* =========================
+   GLOBAL GLOW BACKGROUND
+========================= */
+
+body::after{
+
+  content:"";
+
+  position:fixed;
+
+  bottom:-200px;
+  left:50%;
+
+  width:600px;
+  height:600px;
+
+  background:
+  radial-gradient(
+  circle,
+  rgba(124,58,237,0.25),
+  transparent 70%
+  );
+
+  transform:translateX(-50%);
+
+  z-index:-1;
+
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,h2,h3,h4{
+  line-height:1.2;
+}
+
+p{
+  line-height:1.6;
+  color:var(--text-secondary);
+}
+
+
+/* =========================
+   DISPLAY FONT
+========================= */
+
+.hero-big-title,
+.section-title{
+
+  font-family:var(--font-display);
+  letter-spacing:2px;
+
+}
+
+.hero-big-title{
+
+  text-shadow:
+  3px 3px 0px var(--accent-tertiary);
+
+}
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+.reveal{
+
+  opacity:0;
+  transform:translateY(40px);
+
+  transition:
+  opacity .8s ease,
+  transform .8s ease;
+
+}
+
+.reveal.active{
+
+  opacity:1;
+  transform:translateY(0);
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+
+  font-family:var(--font-primary);
+  font-weight:600;
+
+  position:relative;
+  overflow:hidden;
+
+}
+
+/* shine effect */
+
+.btn::before{
+
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+  120deg,
+  transparent,
+  rgba(255,255,255,0.2),
+  transparent
+  );
+
+  transform:translateX(-100%);
+  transition:.5s;
+
+}
+
+.btn:hover::before{
+  transform:translateX(100%);
+}
+
+
+/* =========================
+   LINK COLORS
+========================= */
+
+a{
+
+  color:var(--accent);
+  text-decoration:none;
+  transition:.2s;
+
+}
+
+a:hover{
+  color:var(--accent-hover);
+}
+
+
+/* =========================
+   CARD BASE STYLE
+========================= */
+
+.about-card,
+.project-card,
+.certificate-card,
+.contact-container{
+
+  background:var(--card-bg);
+
+  border:1px solid var(--border-color);
+
+  transition:
+  transform .3s ease,
+  box-shadow .3s ease;
+
+}
+
+/* light mode shadow */
+
+body.light .about-card,
+body.light .project-card,
+body.light .certificate-card{
+
+  box-shadow:
+  0 6px 24px rgba(0,0,0,0.06);
+
+}
+
+
+/* =========================
+   TECH BADGES
+========================= */
+
+.badge{
+
+  font-family:var(--font-ui);
+
+  background:rgba(56,189,248,0.12);
+
+  border:1px solid rgba(56,189,248,0.4);
+
+  color:var(--accent-secondary);
+
+}
+
+
+/* =========================
+   GRID BACKGROUND CLASS
+========================= */
+
+.grid-bg{
+
+  background-image:
+
+  linear-gradient(
+  var(--grid-color) 1px,
+  transparent 1px
+  ),
+
+  linear-gradient(
+  90deg,
+  var(--grid-color) 1px,
+  transparent 1px
+  );
+
+  background-size:40px 40px;
+
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider.wave{
+
+  height:120px;
+
+  background:transparent;
+
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:var(--accent);
+  border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:var(--accent-hover);
+}
