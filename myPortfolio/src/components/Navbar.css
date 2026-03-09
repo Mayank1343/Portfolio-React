@@ -13,18 +13,14 @@ body.light{
 .navbar{
   width:100%;
   padding:20px 8%;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
-
   position:fixed;
   top:0;
   z-index:1000;
-
   backdrop-filter:blur(10px);
   background:transparent;
-
   border-bottom:1px solid var(--grid-color);
 }
 
@@ -42,6 +38,7 @@ body.light{
   font-size:1.6rem;
   font-weight:bold;
   line-height:1;
+  color: var(--accent);
 }
 
 /* Nav links */
@@ -75,15 +72,10 @@ body.light{
 
 .nav-slider{
   position:absolute;
-
   bottom:-6px;
-
   height:2px;
-
   background: var(--accent);
-
   border-radius:2px;
-
   transition:
   transform .35s cubic-bezier(.16,1,.3,1),
   width .35s cubic-bezier(.16,1,.3,1);
@@ -97,36 +89,77 @@ body.light{
   font-size:1.2rem;
 }
 
-/* Hamburger */
+/* ============================= */
+/* HAMBURGER */
+/* ============================= */
 
 .hamburger{
   display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  cursor:pointer;
+  width:30px;
+  height:22px;
 }
 
-/* Mobile */
+.hamburger span{
+  width:100%;
+  height:3px;
+  background:currentColor;
+  border-radius:2px;
+  transition:0.3s;
+}
+
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* ============================= */
+/* MOBILE NAVBAR */
+/* ============================= */
 
 @media (max-width:768px){
+
+  .navbar{
+    padding:16px 20px;
+  }
+
+  /* Hide desktop nav */
 
   .nav-links{
     position:absolute;
     top:70px;
-    right:0;
-
+    right:20px;
     flex-direction:column;
-
-    background:rgba(15,23,42,0.9);
-
+    background:rgba(15,23,42,0.95);
     width:200px;
-
     padding:20px;
-
-    transform:translateX(100%);
-    transition:0.3s;
+    border-radius:12px;
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.4);
+    transform:translateX(120%);
+    transition:0.3s ease;
   }
 
   .nav-links.open{
     transform:translateX(0);
   }
+
+  .nav-links span{
+    padding:10px 0;
+  }
+
+  /* Show hamburger */
 
   .hamburger{
     display:flex;
@@ -143,7 +176,6 @@ body.light{
 .theme-toggle{
   cursor:pointer;
   font-size:1.3rem;
-
   display:flex;
   align-items:center;
   justify-content:center;

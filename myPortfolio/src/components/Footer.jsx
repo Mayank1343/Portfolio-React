@@ -34,8 +34,13 @@ export default function Footer() {
           <h3>Social Profiles</h3>
 
           <div className="social-icons">
-            <a href="#"><img src="/linkedin.svg" alt="linkedin" /></a>
-            <a href="#"><img src="/github.png" alt="github" /></a>
+            <a href="https://www.linkedin.com/in/mayanksharmaa13/">
+            <img src="/linkedin.svg" alt="linkedin" />
+            </a>
+
+            <a href="https://github.com/Mayank1343">
+            <img src="/github.png" alt="github" />
+            </a>
           </div>
 
         </div>

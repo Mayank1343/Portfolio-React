@@ -20,9 +20,7 @@ export default function Navbar() {
     { name: "Skills", link: "skills" },
   ];
 
-  /* =========================
-     SCROLL DETECTION
-  ========================= */
+  /* SCROLL DETECTION */
 
   useEffect(() => {
 
@@ -56,9 +54,7 @@ export default function Navbar() {
   }, []);
 
 
-  /* =========================
-     MOVE NAV SLIDER
-  ========================= */
+  /*  MOVE NAV SLIDER */
 
   useEffect(() => {
 
@@ -77,9 +73,7 @@ export default function Navbar() {
   }, [active]);
 
 
-  /* =========================
-     SMOOTH SCROLL
-  ========================= */
+  /* SMOOTH SCROLL */
 
   const handleClick = (id) => {
 
@@ -92,9 +86,7 @@ export default function Navbar() {
   };
 
 
-  /* =========================
-     THEME TOGGLE
-  ========================= */
+  /* THEME TOGGLE */
 
   const toggleTheme = () => {
 
@@ -115,9 +107,7 @@ export default function Navbar() {
   }, [darkMode]);
 
 
-  /* =========================
-     COMPONENT
-  ========================= */
+  /* COMPONENT */
 
   return (
 

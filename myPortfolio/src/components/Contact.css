@@ -24,20 +24,13 @@
 /* form container box */
 
 .contact-container{
-
   max-width:400px;
   margin:auto;
-
   padding:40px;
-
   border-radius:16px;
-
   background:rgba(255,255,255,0.03);
-
-  border:1px solid rgba(255,255,255,0.08);
-
   backdrop-filter:blur(10px);
-
+  border: 1px solid var(--text-secondary);
 }
 
 /* form */
@@ -53,38 +46,26 @@ form{
 
 input,
 textarea{
-
   width:100%;
   padding:16px 18px;
-
   border-radius:10px;
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  background:rgba(255,255,255,0.03);
-
+  border:1px solid var(--border-color);
+  background:var(--grid-color);
   backdrop-filter:blur(8px);
-
   color:white;
   font-size:15px;
-
   transition:all .25s ease;
-
 }
 
 /* focus */
 
 input:focus,
 textarea:focus{
-
   outline:none;
-
   border-color:#38bdf8;
-
   box-shadow:
   0 0 0 1px #38bdf8,
   0 0 15px rgba(56,189,248,0.25);
-
 }
 
 /* textarea */
@@ -97,12 +78,9 @@ textarea{
 /* button */
 
 button{
-
   padding:16px;
-
   border:none;
   border-radius:10px;
-
   background:linear-gradient(
     90deg,
     #38bdf8,
@@ -110,24 +88,17 @@ button{
   );
 
   color:white;
-
   font-size:16px;
   font-weight:600;
-
   cursor:pointer;
-
   transition:all .3s ease;
-
 }
 
 button:hover{
-
   transform:translateY(-2px);
-
   box-shadow:
   0 10px 25px rgba(56,189,248,0.3),
   0 0 20px rgba(124,58,237,0.25);
-
 }
 
 /* status */

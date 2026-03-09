@@ -31,7 +31,6 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="divider wave"></div> 
 
       <Hero />
       <div className="divider wave"></div> 

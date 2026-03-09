@@ -52,9 +52,7 @@
   position: absolute;
   width: 220px;
   height: 220px;
-
   background: rgba(56,189,248,0.2);
-
   border-radius: 60% 40% 30% 70%;
   animation: float 8s ease-in-out infinite;
 }
@@ -73,42 +71,27 @@
 /* ============================= */
 
 .hero-big-title{
-
   font-family:var(--font-display);
-
   font-size:clamp(60px,8vw,100px);
   font-weight:900;
-
   text-transform:uppercase;
-
   line-height:.9;
-
   position:relative;
-
   color:var(--text-primary);
-
   letter-spacing:1px;
-
   transition:transform .3s ease;
-
 }
 
 
 /* PURPLE DEPTH LAYER */
 
 .hero-big-title::before{
-
   content:attr(data-text);
-
   position:absolute;
-
   left:6px;
   top:6px;
-
   color:var(--accent-tertiary);
-
   z-index:-1;
-
 }
 
 
@@ -129,9 +112,7 @@
 /* LIGHT MODE ADJUSTMENT */
 
 body.light .hero-big-title{
-
   color:#0f172a;
-
   text-shadow:
   0 15px 40px rgba(0,0,0,0.15);
 }
@@ -160,81 +141,62 @@ body.light .hero{
 /* ============================= */
 
 .hero-title-wrapper{
-
   position:relative;
   display:inline-block;
-
 }
+
 
 /* MAIN TEXT */
 
 .hero-big-title{
-
   position:relative;
   z-index:3;
-
   font-family:var(--font-display);
-  font-size:clamp(60px,8vw,100px);
+  font-size:clamp(3rem,8vw,6rem);
   font-weight:900;
   line-height:.9;
-
   color:var(--text-primary);
-
 }
+
 
 
 /* SHADOW LAYER */
 
 .hero-title-shadow{
-
   position:absolute;
   top:8px;
   left:8px;
-
   z-index:2;
-
   font-family:var(--font-display);
-  font-size:clamp(60px,8vw,100px);
+  font-size:clamp(3rem,8vw,6rem);
   font-weight:900;
   line-height:.9;
-
   color:var(--accent-tertiary);
-
 }
 
 
 /* GLOW LAYER */
 
 .hero-title-glow{
-
   position:absolute;
   top:16px;
   left:16px;
-
   z-index:1;
-
   font-family:var(--font-display);
   font-size:clamp(60px,8vw,100px);
   font-weight:900;
   line-height:.9;
-
   color:var(--accent);
-
   opacity:.25;
-
   filter:blur(10px);
 }
 
 .hero-title-wrapper:hover .hero-big-title{
-
   transform:translateY(-4px);
-
 }
 
 .hero-title-wrapper:hover .hero-title-shadow{
-
   transform:translateY(-2px);
-
 }
 
 /* ============================= */
@@ -253,20 +215,18 @@ body.light .hero{
 .hero-intro p {
   font-size: 15px;
   line-height: 1.2;
-
   color: var(--text-secondary);
-
   text-align: left;
 }
 
 .hero-cta {
+  display: inline-block;
+  width: fit-content;
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 600;
   font-style: italic;
-
   border-bottom: 2px solid var(--text-primary);
-
   padding-bottom: 3px;
   transition: all 0.3s ease;
 }
@@ -290,6 +250,7 @@ body.light .hero{
 /* ============================= */
 /* HERO CONTENT */
 /* ============================= */
+
 
 .hero-text{
   display: flex;
@@ -325,6 +286,7 @@ body.light .hero{
   line-height: 1.4;
   margin-top: 3%;
 }
+
 
 
 /* ============================= */
@@ -374,26 +336,20 @@ body.light .hero{
 /* ============================= */
 
 .hero-grid-panel {
-
   margin-top: 3%;
   width: 100%;
+  max-width: 100%;
   align-self: center;
-
   background: var(--card-bg);
-
   border-radius: 100px;
   height: 310px;
   position: relative;
   overflow: hidden;
-
   border: 1px solid var(--border-color);
-
   background-image:
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-
   background-size: 30px 30px;
-
   box-shadow:
     inset 0 0 40px rgba(0,0,0,0.05),
     0 20px 40px rgba(0,0,0,0.2);
@@ -402,28 +358,19 @@ body.light .hero{
 body.light .hero-grid-panel{
 
   background:#ffffff;
-
   border:1px solid rgba(0,0,0,0.06);
-
   box-shadow:
   0 20px 40px rgba(0,0,0,0.08);
-
   background-image:
     linear-gradient(rgba(15,23,42,0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15,23,42,0.08) 1px, transparent 1px);
-
   background-size:30px 30px;
-
 }
 
 body.light .navbar{
-
   background:rgba(255,255,255,0.7);
-
   backdrop-filter: blur(12px);
-
   border-bottom:1px solid rgba(0,0,0,0.06);
-
 }
 
 
@@ -431,61 +378,223 @@ body.light .navbar{
 /* FLOATING CARDS */
 /* ============================= */
 
-.floating-card {
-  position: absolute;
-  padding: 20px;
-  font-weight: bold;
-  text-align: center;
-  color: #000;
-  transition: transform 0.4s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.floating-card{
+  position:absolute;
+  padding:20px;
+  font-weight:bold;
+  text-align:center;
+  color:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:transform .4s ease;
 }
 
-.card-1 {
-  background: #14b8a6;
-  top: 90px;
-  left: 140px;
-  border-radius: 20px;
-  width: 200px;
-  height: 40%;
-  transform: rotate(-10deg);
+/* sticky note 1 */
+
+.card-1{
+  background:#14b8a6;
+  top:28%;
+  left:10%;
+  width:200px;
+  height:110px;
+  border-radius:20px;
+  transform:rotate(-10deg);
 }
 
-.card-2 {
-  background: #facc15;
-  top: 60px;
-  right: 400px;
-    border-radius: 40px;
-  width: 150px;
-  height: 40%;
-  transform: rotate(8deg);
+/* sticky note 2 */
+
+.card-2{
+  background:#facc15;
+  top:18%;
+  right:25%;
+  width:170px;
+  height:110px;
+  border-radius:40px;
+  transform:rotate(8deg);
 }
 
-.floating-card:hover {
-  transform: rotate(0deg) scale(1.08);
+/* hover effect */
+
+.floating-card:hover{
+  transform:scale(1.08) rotate(0deg);
 }
+
 
 
 /* ============================= */
 /* FLOATING ICONS */
 /* ============================= */
 
-.floating-icon {
-  position: absolute;
-  width: 40px;
-  transition: transform 0.3s ease;
+.floating-icon{
+  position:absolute;
+  width:42px;
+  transition:transform .3s ease;
 }
 
-.icon-1 { top: 120px; left: 37%; }
-.icon-2 { top: 160px; left: 47%; }
-.icon-3 { top: 150px; left: 75%; }
-
-.floating-icon:hover {
-  transform: scale(1.2);
+.icon-1{
+  top:45%;
+  left:40%;
 }
 
+.icon-2{
+  top:55%;
+  left:48%;
+}
+
+.icon-3{
+  top:50%;
+  left:80%;
+}
+
+.floating-icon:hover{
+  transform:scale(1.2);
+}
+
+.floating-icon{
+  animation:floatNote 6s ease-in-out infinite;
+}
+
+@keyframes floatNote{
+  0%,100%{ transform:translateY(0) rotate(-5deg); }
+  50%{ transform:translateY(-10px) rotate(-3deg); }
+}
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media (max-width:900px){
+
+.card-1{
+  width:160px;
+  height:95px;
+}
+
+.card-2{
+  width:140px;
+  height:90px;
+}
+
+.floating-icon{
+  width:36px;
+}
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media (max-width:700px){
+
+.card-1{
+  width:140px;
+  height:80px;
+  top:32%;
+  left:6%;
+}
+
+.card-2{
+  width:120px;
+  height:80px;
+  top:20%;
+  right:6%;
+}
+
+.floating-icon{
+  width:30px;
+}
+
+.icon-1{ left:38%; }
+.icon-2{ left:55%; }
+.icon-3{ left:75%; top: 55%; }
+}
+
+
+@media (max-width:550px){
+
+.card-1{
+  width:140px;
+  height:80px;
+  top:32%;
+  left:6%;
+  padding: 2px;
+}
+
+.card-2{
+  width:120px;
+  height:80px;
+  top:20%;
+  right:6%;
+}
+
+.floating-icon{
+  width:30px;
+}
+
+.icon-1{ left:42%; }
+.icon-2{ left:50%; top:70%; }
+.icon-3{ left:60%; }
+
+}
+
+@media (max-width:470px){
+
+.card-1{
+  width:140px;
+  height:80px;
+  top:32%;
+  left:6%;
+  padding: 2px;
+}
+
+.card-2{
+  width:120px;
+  height:80px;
+  top:20%;
+  right:6%;
+}
+
+.floating-icon{
+  width:30px;
+}
+
+.icon-1{ left:32%; top:70% }
+.icon-2{ left:50%; top:70%; }
+.icon-3{ left:67%; top: 60%; }
+
+}
+
+@media (max-width:470px){
+
+.card-1{
+  width:100px;
+  height:80px;
+  top:32%;
+  left:6%;
+  padding: 2px;
+  font-size: 14px;
+}
+
+.card-2{
+  width:100px;
+  height:70px;
+  top:20%;
+  right:6%;
+  font-size: 14px;
+}
+
+.floating-icon{
+  width:30px;
+}
+
+.icon-1{ left:32%; top:70% }
+.icon-2{ left:50%; top:70%; }
+.icon-3{ left:67%; top: 60%; }
+
+}
 
 /* ============================= */
 /* PROFILE IMAGE */
@@ -502,9 +611,7 @@ body.light .navbar{
 .hero-image img {
   width: 240px;
   border-radius: 24px;
-
   box-shadow: 0 30px 60px rgba(0,0,0,0.35);
-
   transition: transform 0.4s ease;
 }
 
@@ -513,39 +620,4 @@ body.light .navbar{
 }
 
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
-@media (max-width: 900px) {
-
-  .hero {
-    padding: 100px 6%;
-  }
-
-  .hero-big-title {
-    font-size: clamp(40px, 10vw, 70px);
-  }
-
-  .hero-image {
-    position: static;
-    margin-top: 40px;
-    align-self: center;
-  }
-
-  .hero-grid-panel {
-    height: 250px;
-  }
-
-  .card-1 {
-    left: 40px;
-    top: 80px;
-  }
-
-  .card-2 {
-    right: 40px;
-    top: 60px;
-  }
-
-}
 

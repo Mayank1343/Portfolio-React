@@ -7,36 +7,35 @@ export const projects = [
     category: "Full Stack",
     github: "https://github.com/Mayank1343/BLOOD-BRIDGE.git",
     demo: "https://superlative-marshmallow-9c48ab.netlify.app/",
-    tech: ["Java", "Spring Boot", "React", "PostgreSQL", "Docker", "Netlify", "Render"]
+    tech: ["Java", "Spring Boot", "React", "MySQL", "Netlify", "Render"]
   },
   {
     id: 2,
-    title: "Signature Verification",
-    description: "Deep learning signature model.",
-    image: "/project2.jpg",
-    category: "AI",
-    github: "#",
-    demo: "#",
-    tech: ["React", "CSS", "JavaScript"]
-  },
-  {
-    id: 3,
     title: "SQL Query Parser",
-    description: "Parser using C + Python GUI.",
-    image: "/project3.jpg",
+    description: "Checks SQL Queries using C + Python GUI.",
+    image: "/project2.png",
     category: "Backend",
     github: "https://github.com/Mayank1343/SQL-Query-Parser.git",
-    demo: "#",
     tech: ["C", "Flex", "Bison", "Python(Tkinter GUI)"]
   },
   {
-    id: 4,
+    id: 3,
     title: "Portfolio Website",
     description: "Personal portfolio built using React.",
-    image: "/project1.jpg",
+    image: "/project3.png",
     category: "Frontend",
     github: "#",
     demo: "#",
     tech: ["React", "CSS", "JavaScript"]
+  },
+   {
+    id: 4,
+    title: "LeetMetic",
+    description: "JavaScript web application that retrieves and visualizes LeetCode statistics using GraphQL APIs.",
+    image: "/project4.png",
+    category: "Frontend",
+    github: "https://github.com/Mayank1343/LeetMetric",
+    demo: "#",
+    tech: ["JavaScript", "CSS", "Html"]
   }
 ];

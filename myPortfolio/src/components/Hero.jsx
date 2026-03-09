@@ -62,19 +62,20 @@ export default function Hero() {
 
         <div className="hero-title-wrapper">
 
-  <h1 className="hero-big-title">
-    FULL STACK
-    <br />
-    ENGINEER
-  </h1>
+        <h1 className="hero-big-title">
+          FULL STACK
+          <br />
+          ENGINEER
+        </h1>
 
-  <h1 className="hero-title-shadow">
-    FULL STACK
-    <br />
-    ENGINEER
-  </h1>
+        <h1 className="hero-title-shadow">
+         FULL STACK
+        <br />
+        ENGINEER
+        </h1>
 
-</div>
+        </div>
+        
         <div className="hero-intro">
 
           <p>
@@ -103,9 +104,18 @@ export default function Hero() {
             CODE WITH CREATIVITY!
           </div>
 
-          <img src="/linkedin.svg" className="floating-icon icon-1" />
+          <a href="https://www.linkedin.com/in/mayanksharmaa13/" target="_blank">
+          <img src="/linkedin.svg" className="floating-icon icon-1"/>
+          </a>
+
+          <a href="https://github.com/Mayank1343" target="_blank">
           <img src="/github.png" className="floating-icon icon-2" />
+          </a>
+
+          
+          <a href="https://www.youtube.com/@MayankHikes" target="_blank">
           <img src="/youtube.svg" className="floating-icon icon-3" />
+          </a>
 
         </div>
 

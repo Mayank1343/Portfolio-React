@@ -30,8 +30,8 @@ export default function About() {
           <div className="buttons">
             <a href="#projects" className="btn primary">Projects</a>
             <a href="#contact" className="btn secondary">Contact</a>
-            <a href="/Mayank-Sharma-Resume.pdf" download className="btn resume">
-              Download Resume
+            <a href="https://drive.google.com/file/d/16YAqHcEMVcetMue7tyRz6RfVU8ivsIz8/view?usp=drive_link" target="_blank" className="btn resume">
+              View Resume
             </a>
           </div>
 
@@ -41,7 +41,7 @@ export default function About() {
 
           <div className="about-card">
             <h3>💻 Development</h3>
-            <p>Frontend focused developer building modern web apps with React.</p>
+            <p>Building modern web applications with a focus on clean design and functionality.</p>
           </div>
 
           <div className="about-card">

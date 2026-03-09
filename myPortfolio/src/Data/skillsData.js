@@ -1,25 +1,20 @@
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+
 export const skills = [
-  {
-    category: "Frontend",
-    items: [
-      { name: "HTML", level: 90, icon: "🌐" },
-      { name: "CSS", level: 85, icon: "🎨" },
-      { name: "JavaScript", level: 80, icon: "🟨" },
-      { name: "React", level: 75, icon: "⚛️" }
-    ]
-  },
-  {
-    category: "Backend",
-    items: [
-      { name: "Node.js", level: 65, icon: "🟢" },
-      { name: "SQL", level: 70, icon: "🗄️" }
-    ]
-  },
-  {
-    category: "Tools",
-    items: [
-      { name: "Git", level: 75, icon: "🔧" },
-      { name: "VS Code", level: 85, icon: "💻" }
-    ]
-  }
+  { name: "HTML", icon: "devicon-html5-plain colored" },
+  { name: "CSS", icon: "devicon-css3-plain colored" },
+  { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+  { name: "React", icon: "devicon-react-original colored" },
+
+  { name: "Node.js", icon: "devicon-nodejs-plain colored" },
+  { name: "C++", icon: "devicon-cplusplus-plain colored" },
+
+  { name: "Java", icon: "devicon-java-plain colored" },
+  { name: "Spring Boot", icon: "devicon-spring-plain colored" },
+  
+  { name: "MySQL", icon: "devicon-mysql-plain colored" },
+
+  { name: "GitHub", icon: "devicon-github-original" },
+  { name: "Docker", icon: "devicon-docker-plain colored" }
 ];

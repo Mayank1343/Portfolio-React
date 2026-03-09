@@ -1,13 +1,9 @@
-/* =========================
-   FONT IMPORTS
-========================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url("https://db.onlinewebfonts.com/c/6d2a9bcf540150d9e12e88c4b0c5c305?family=Media+Sans+Extended");
 
 
 /* =========================
-   ROOT VARIABLES (BRAND)
+   ROOT VARIABLES
 ========================= */
 
 :root{
@@ -86,8 +82,10 @@ body.light{
   box-sizing:border-box;
 }
 
-html{
+html, body{
   scroll-behavior:smooth;
+  overflow-x:hidden;
+  width:100%;
 }
 
 
@@ -96,18 +94,13 @@ html{
 ========================= */
 
 body{
-
   font-family:var(--font-primary);
-
   background:var(--bg-primary);
   color:var(--text-primary);
-
   overflow-x:hidden;
-
   transition:
   background .35s ease,
   color .25s ease;
-
 }
 
 
@@ -116,23 +109,16 @@ body{
 ========================= */
 
 body::before{
-
   content:"";
   position:fixed;
   inset:0;
-
   background-image:
   linear-gradient(var(--grid-color) 1px,transparent 1px),
   linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
-
   background-size:60px 60px;
-
   opacity:0.35;
-
   animation:gridMove 80s linear infinite;
-
   z-index:-2;
-
 }
 
 @keyframes gridMove{
@@ -153,14 +139,10 @@ body::before{
 ========================= */
 
 body::after{
-
   content:"";
-
   position:fixed;
-
   bottom:-200px;
   left:50%;
-
   width:600px;
   height:600px;
 
@@ -170,11 +152,8 @@ body::after{
   rgba(124,58,237,0.25),
   transparent 70%
   );
-
   transform:translateX(-50%);
-
   z-index:-1;
-
 }
 
 
@@ -198,17 +177,13 @@ p{
 
 .hero-big-title,
 .section-title{
-
   font-family:var(--font-display);
   letter-spacing:2px;
-
 }
 
 .hero-big-title{
-
   text-shadow:
   3px 3px 0px var(--accent-tertiary);
-
 }
 
 
@@ -329,15 +304,10 @@ body.light .certificate-card{
 ========================= */
 
 .badge{
-
   font-family:var(--font-ui);
-
   background:rgba(56,189,248,0.12);
-
   border:1px solid rgba(56,189,248,0.4);
-
   color:var(--accent-secondary);
-
 }
 
 
@@ -348,7 +318,6 @@ body.light .certificate-card{
 .grid-bg{
 
   background-image:
-
   linear-gradient(
   var(--grid-color) 1px,
   transparent 1px
@@ -370,11 +339,8 @@ body.light .certificate-card{
 ========================= */
 
 .divider.wave{
-
   height:120px;
-
   background:transparent;
-
 }
 
 
@@ -399,4 +365,30 @@ body.light .certificate-card{
 
 ::-webkit-scrollbar-thumb:hover{
   background:var(--accent-hover);
+}
+
+
+
+/*  EXTRA */
+img{
+  max-width:100%;
+  height:auto;
+}
+
+.skill-card,
+.project-card,
+.certificate-card{
+  width:100%;
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+
+
+section .section-title{
+  font-size: clamp(26px, 6vw, 42px);
+  margin-bottom: clamp(25px, 5vw, 60px);
+  text-align:center;
+  line-height:1.2;
 }

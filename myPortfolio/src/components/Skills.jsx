@@ -1,32 +1,24 @@
-import { skills } from "../data/skillsData";
-import SkillBar from "./SkillBar";
+import { skills } from "../Data/skillsData";
 import "./Skills.css";
 
-export default function Skills() {
+function Skills() {
   return (
-    <section className="skills-section reveal" id="skills">
+    <section className="skills-section" id="skills">
 
       <h2 className="section-title">My Skills</h2>
+      <div className="skills-grid">
 
-      {skills.map((group, index) => (
-        <div key={index} className="skill-group">
+        {skills.map((skill, index) => (
 
-          <h3 className="category-title">{group.category}</h3>
-
-          <div className="skills-container">
-            {group.items.map((skill, i) => (
-              <SkillBar
-                key={i}
-                name={skill.name}
-                level={skill.level}
-                icon={skill.icon}
-              />
-            ))}
+          <div className="skill-card" key={index}>
+            <i className={`skill-icon ${skill.icon}`}></i>
+            <p>{skill.name}</p>
           </div>
+        ))}
 
-        </div>
-      ))}
-
+      </div>
     </section>
   );
 }
+
+export default Skills;

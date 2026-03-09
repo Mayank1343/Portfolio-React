@@ -1,27 +1,103 @@
-.skills-section {
-  padding: 100px 8%;
+/* ============================= */
+/* SKILLS SECTION */
+/* ============================= */
+
+.skills-section{
+  padding:120px 8%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 50px;
+
+/* ============================= */
+/* GRID */
+/* ============================= */
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  width:100%;
+  max-width:900px;
 }
 
-.skill-group {
-  margin-bottom: 50px;
+
+/* ============================= */
+/* SKILL CARD */
+/* ============================= */
+
+.skill-card{
+  background:var(--card-bg);
+  padding:28px 20px;
+  border-radius:14px;
+  border: 1px solid var(--text-secondary);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  transition:all 0.35s ease;
 }
 
-.category-title {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: #38bdf8;
+
+/* Hover effect */
+
+.skill-card:hover{
+  transform:translateY(-6px);
+  box-shadow:
+  0 12px 30px rgba(0,0,0,0.25);
 }
 
-.skills-container {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+
+/* ============================= */
+/* ICON */
+/* ============================= */
+
+.skill-icon{
+  font-size:42px;
+}
+
+
+/* Icon hover */
+
+.skill-card:hover .skill-icon{
+  transform:scale(1.2);
+}
+
+
+/* Text */
+
+.skill-card p{
+  font-size:15px;
+  font-weight:500;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width:900px){
+
+  .skills-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
+
+@media (max-width:600px){
+
+  .skills-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media (max-width:400px){
+
+  .skills-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
 }
