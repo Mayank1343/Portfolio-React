@@ -43,47 +43,7 @@ The goal of this project is to create a simple yet visually appealing platform w
 
 ## Project Structure
 
-portfolio-website
-│
-├── public
-│   ├── github.png
-│   ├── linkedin.svg
-│   ├── youtube.svg
-│
-├── src
-│
-│   ├── components
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Projects.jsx
-│   │   ├── ProjectCard.jsx
-│   │   ├── ProjectModal.jsx
-│   │   ├── Certificates.jsx
-│   │   ├── CertificateCard.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Contact.jsx
-│   │   └── Footer.jsx
-│
-│   ├── data
-│   │   ├── projectsData.js
-│   │   └── skillsData.js
-│
-│   ├── styles
-│   │   ├── navbar.css
-│   │   ├── hero.css
-│   │   ├── about.css
-│   │   ├── projects.css
-│   │   ├── projectCard.css
-│   │   ├── certificates.css
-│   │   ├── skills.css
-│   │   ├── contact.css
-│   │   └── footer.css
-│
-│   ├── App.jsx
-│   └── main.jsx
-│
-└── package.json
+<img width="577" height="775" alt="image" src="https://github.com/user-attachments/assets/89f901ea-d4d5-4e5d-a226-25e979a9710a" />
 
 ---
 
