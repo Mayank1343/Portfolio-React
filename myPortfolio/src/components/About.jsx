@@ -30,7 +30,7 @@ export default function About() {
           <div className="buttons">
             <a href="#projects" className="btn primary">Projects</a>
             <a href="#contact" className="btn secondary">Contact</a>
-            <a href="https://drive.google.com/file/d/16YAqHcEMVcetMue7tyRz6RfVU8ivsIz8/view?usp=drive_link" target="_blank" className="btn resume">
+            <a href="https://drive.google.com/file/d/1VQaDBR9yjQXfzHy_gmTPXOZrIpCRZtlK/view?usp=sharing" target="_blank" className="btn resume">
               View Resume
             </a>
           </div>
