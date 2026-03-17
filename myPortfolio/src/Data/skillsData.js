@@ -7,7 +7,6 @@ export const skills = [
   { name: "JavaScript", icon: "devicon-javascript-plain colored" },
   { name: "React", icon: "devicon-react-original colored" },
 
-  { name: "Node.js", icon: "devicon-nodejs-plain colored" },
   { name: "C++", icon: "devicon-cplusplus-plain colored" },
 
   { name: "Java", icon: "devicon-java-plain colored" },
